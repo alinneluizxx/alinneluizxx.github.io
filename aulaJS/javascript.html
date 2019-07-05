@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello Javascript World</title>
+    <style>
+        body{
+            background-color:cornflowerblue;
+            color:floralwhite;
+         }
+
+    </style>
+</head>
+<body>
+
+    <script>
+        //Comentário de uma linha
+          /***
+          ** Comentário de Múltiplas Linhas
+          ** O comando abaixo só é visto no console
+          ** do navegador
+          ***/
+        console.log("Alo Ha mundo Javascript");
+        // Abre uma janela e exibe o conteúdo!
+        // Garante que só será executado após carregar todos
+        // elementos HTML
+        alert("Saudade do Sublime");
+        window.onload = function(){
+            document.querySelector("h1").textContent = "JS é masssa";
+
+            // Elemento HTML em uma variável Javascript
+            var paçoca = document.querySelector("h1");
+            paçoca.innerHTML = "<em>JS</em> não é Java!";
+            paçoca.style = "font-size: 50px; \ color: red;";//Saudade
+
+                    // Variável moderna local
+            let h1_2 = document.querySelector(".segundoH1");
+            let h1_3 = document.querySelector("#terceiroH1");
+
+            h1_2.style = "font-size: 10px";
+            h1_3.style = "text-shadow: 3px 3px 5px black";
+
+            let h_uns = document.querySelectorAll("h1");
+
+            h_uns.style = "border: 2px dashed white";
+
+            for(let i=0; i < h_uns.length; i++)
+                h_uns[i].style = "border: 2px dashed white";
+        }
+
+
+    </script>
+
+    <h1>Introdução à Linguagem Javascript</h1>
+    <h1 class="segundoH1">Segundo H1</h1>
+    <h1 id="terceiroH1">Terceiro H1</h1>
+
+    
+<div style="text-align: center; background-color:white;">
+    <h2>Exemplo da Lâmpada</h2>
+
+    <button onclick="document.querySelector('#Lâmpada').src ='acesa.jpg'"> Acender </button>
+    
+    <img src="apagada.jpg" id="Lâmpada" onmouseover="acender()" onmouseout="apagar()">
+
+    <button onclick="document.querySelector('#Lâmpada').src ='apagada.jpg'"> Apagar </button>
+</div>
+
+    <script>
+        var Lâmpada = document.querySelector("#Lâmpada");
+        function acender(){Lâmpada.src = "acesa.jpg"}
+        function apagar(){Lâmpada.src = "apagada.jpg"}
+    </script>
+
+    
+</body>
+</html>
